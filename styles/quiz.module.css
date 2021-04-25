@@ -1,0 +1,158 @@
+.stackTop {
+  z-index: 9;
+  position: absolute;
+  display: flex;
+  width: 100%;
+  top: 0;
+}
+
+.centerLogo {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 100%;
+}
+
+.nav {
+  width: 100%;
+}
+
+.box {
+  height: 100%;
+  width: 100%;
+}
+
+.content {
+  margin-top: 10%;
+}
+
+.progress {
+  background-color: #ffffff;
+  border: 0.1rem solid #ffffff;
+  width: 60%;
+  border-radius: 30px;
+  margin: auto;
+}
+
+.progressBar {
+  background-color: #f7931d;
+  border: 0.3rem solid#F7931D;
+  width: 0%;
+  border-radius: 30px;
+}
+
+.container {
+  margin: 3rem auto;
+  width: 100%;
+  text-align: center;
+}
+
+.disableBtn {
+  background: #f8921e42;
+}
+
+.groupChoice {
+  width: 100%;
+  text-align: center;
+  margin-top: 1.5rem;
+}
+
+.groupChoice button {
+  width: 90%;
+  height: 43px;
+  margin-top: 1rem;
+
+  border: 1px solid #455a64;
+  box-sizing: border-box;
+  background: transparent;
+  cursor: pointer;
+}
+
+.groupChoice button p {
+  text-align: start !important;
+  font-weight: 600;
+  font-size: 24px;
+  color: #455a64;
+  margin: 0;
+  margin-left: 1rem;
+}
+
+@media only screen and (max-width: 575.98px) {
+  .appText {
+    margin-left: 1rem;
+    margin-right: 1rem;
+    text-align: start;
+  }
+
+  .hideBg {
+    display: none;
+  }
+
+  /* .groupChoice {
+    width: 100%;
+    text-align: center;
+    margin-top: 1.5rem;
+  } */
+
+  /* .groupChoice button {
+    width: 90%;
+    height: 43px;
+    margin-top: 1rem;
+
+    border: 1px solid #455a64;
+    box-sizing: border-box;
+    background: transparent;
+    cursor: pointer;
+  } */
+
+  /* .groupChoice button p {
+    text-align: start;
+    font-weight: 600;
+    font-size: 24px;
+    color: #455a64;
+    margin: 0;
+    margin-left: 1rem;
+  } */
+
+  .expandCol {
+    min-height: 100%;
+  }
+}
+
+@media only screen and (min-width: 575.98px) {
+  .centerLogo {
+    margin-right: 0;
+  }
+
+  .colWeb1 {
+    width: 40%;
+    background-color: #c4c4c4;
+  }
+
+  .colWeb2 {
+    width: 60%;
+  }
+
+  .content {
+    margin-top: 0%;
+  }
+
+  .appText {
+    font-size: 1.9rem;
+    text-align: center !important;
+  }
+
+  #clearPadding {
+    padding-right: 0 !important;
+    text-align: center !important;
+  }
+
+  .content {
+    width: 100%;
+    /* margin-top: 2rem; */
+  }
+
+  .content button{
+    margin-top: 2rem;
+  }
+}

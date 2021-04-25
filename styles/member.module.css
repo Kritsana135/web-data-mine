@@ -1,0 +1,40 @@
+.multiText {
+  font-style: normal;
+  font-weight: normal;
+  font-size: 2rem;
+  color: #4b4847;
+  margin: 0.3rem;
+}
+
+.disableMargin {
+  margin: 0;
+}
+
+.btnGroup {
+  margin-top: 0.3rem;
+  text-align: center;
+}
+
+.expandCol div {
+  width: 100%;
+}
+
+#centerP {
+  /* flex-flow: row; */
+  text-align: center;
+}
+
+@media only screen and (max-width: 575.98px) {
+  .hideBg {
+    display: none;
+  }
+
+  .expandCol {
+    min-height: 80%;
+  }
+
+  .multiText {
+    font-size: 1.3rem;
+    margin: 1rem;
+  }
+}

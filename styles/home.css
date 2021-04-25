@@ -1,0 +1,215 @@
+html,
+body {
+  height: 100%;
+  margin: 0;
+  font-family: "Prompt", sans-serif;
+  background-color: #e5e5e5;
+}
+
+.box {
+  display: flex;
+  flex-flow: column;
+  height: 100%;
+  align-items: center;
+}
+
+.box .row.header {
+  flex: 0 1 auto;
+  /* The above is shorthand for:
+        flex-grow: 0,
+        flex-shrink: 1,
+        flex-basis: auto
+        */
+}
+
+.box .row.content {
+  flex: 1 1 auto;
+}
+
+.box .row.footer {
+  flex: 0 1 40px;
+}
+
+.about {
+  font-style: normal;
+  font-weight: normal;
+  font-size: 18px;
+  color: #4b4747;
+}
+
+.about:hover {
+  color: #0c0b0b;
+}
+
+.nav__item {
+  display: none;
+}
+
+.nav__logo {
+  display: inline-block;
+  margin-top: 0px;
+  cursor: pointer;
+}
+
+.nav__logo img {
+  max-width: 232px;
+  max-height: 54px;
+}
+
+.header {
+  margin-top: 10px;
+}
+
+.col {
+  display: flex;
+  flex-flow: column;
+  align-items: center;
+}
+
+.col:nth-child(1) {
+  height: 40%;
+  justify-content: center;
+}
+
+.col:nth-child(2) {
+  height: 60%;
+  background-position: center;
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+
+.app-text {
+  font-style: normal;
+  font-weight: 600;
+  font-size: 24px;
+  color: #000000;
+  margin-bottom: 0px;
+  text-align: center;
+}
+
+.about-text {
+  font-style: normal;
+  font-weight: normal;
+  font-size: 18px;
+  margin-left: 7%;
+  margin-right: 7%;
+  color: #4b4847;
+  margin-top: 10px;
+}
+
+.btn {
+  width: 130px;
+  height: 38.17px;
+  border-radius: 12px;
+  border: none;
+  background: #f8931e;
+
+  font-style: normal;
+  font-weight: 600;
+  font-size: 14px;
+  color: #fafafa;
+
+  margin-top: 5px;
+  cursor: pointer;
+}
+
+.btn:hover {
+  background: rgb(246, 157, 55);
+  color: #fafafa;
+}
+
+.btn:active {
+  background: #fafafa;
+  color: #f8931e;
+}
+
+.group button {
+  margin-left: 10px;
+}
+
+.btn-2 {
+  background: #e5e5e5;
+  border: 1px solid #f8931e;
+  box-sizing: border-box;
+  color: #f8931e;
+}
+
+@media only screen and (min-width: 575.98px) {
+  /* disabled footer */
+  .footer {
+    display: none;
+  }
+
+  .box {
+    align-items: initial;
+  }
+
+  .nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 60px;
+    top: 0;
+    margin-top: 10px;
+    margin-left: 5%;
+    margin-right: 5%;
+  }
+
+  .nav__item {
+    display: inherit;
+  }
+
+  .about {
+    font-style: normal;
+    font-weight: normal;
+    font-size: 36px;
+    text-align: right;
+    color: #4b4747;
+  }
+
+  .nav__item a {
+    color: inherit;
+  }
+
+  .content {
+    display: flex;
+    flex-flow: row;
+    flex-direction: row-reverse;
+  }
+
+  .col {
+    width: 50%;
+    min-height: 100%;
+  }
+
+  .col:nth-child(1) {
+    align-items: flex-end;
+    padding-right: 5%;
+  }
+
+  .col:nth-child(1) p {
+    width: 100%;
+    text-align: right;
+  }
+
+  .about-text {
+    margin: 0;
+    font-size: 36px;
+    padding-top: 5%;
+    padding-bottom: 5%;
+  }
+
+  .app-text {
+    font-size: 3rem;
+  }
+
+  .btn {
+    width: 235px;
+    height: 69px;
+    font-size: 24px;
+  }
+
+  .un-active {
+    display: none;
+  }
+}

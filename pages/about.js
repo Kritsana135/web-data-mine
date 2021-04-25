@@ -1,26 +1,32 @@
 import Content from "../components/Content"
-import NavigationBar from "../components/NavigationBar"
 import Footer from "../components/Footer"
+import NavigationBar from "../components/NavigationBar"
 
-const btn1 = {
-  text: "Click to Start",
-  uri: "/quiz",
+const btn2 = {
+  text: "Back To Home",
+  uri: "/",
 }
 
-export default function Home() {
+const btn1 = {
+  text: "See Member",
+  uri: "/member",
+}
+
+export default function result() {
   return (
     <div className="box">
       <div className="row header">
-        <NavigationBar />
+        <NavigationBar hide={true} />
       </div>
-      <div className="row content">
+      <div className={`row content`}>
         <Content
-          title={"Application Title"}
+          title={"About Site"}
           text={
             "Lorem Ipsum is simply dummy text of the printing and type setting industry. Lorem"
           }
-          imageUri={"/main-people.png"}
+          imageUri={"/about.png"}
           btn1={btn1}
+          btn2={btn2}
         />
       </div>
       <Footer />
