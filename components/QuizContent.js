@@ -87,7 +87,7 @@ export default function Content(props) {
         </div>
         <div className={`group ${Quiz.content}`}>
           <button className="btn btn-2" onClick={() => changeCurrent(-1)}>
-            {current === 0 ? "กลับหน้าหลัก" : "Back"}
+            {current === 0 ? "กลับหน้าหลัก" : "ก่อนหน้า"}
           </button>
           <button
             className={`btn ${
