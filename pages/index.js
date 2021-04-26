@@ -1,6 +1,7 @@
 import Content from "../components/Content"
 import NavigationBar from "../components/NavigationBar"
 import Footer from "../components/Footer"
+import Head from "next/head"
 
 const btn1 = {
   text: "Click to Start",
@@ -10,6 +11,10 @@ const btn1 = {
 export default function Home() {
   return (
     <div className="box">
+      <Head>
+        <title>Predict Framework</title>
+        <meta name="viewport" content="initial-scale=1.0, width=device-width" />
+      </Head>
       <div className="row header">
         <NavigationBar />
       </div>

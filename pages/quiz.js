@@ -2,6 +2,7 @@ import QuizContent from "../components/QuizContent"
 import Footer from "../components/Footer"
 import NavigationQuiz from "../components/NavigationQuiz"
 import Quiz from "../styles/quiz.module.css"
+import Head from "next/head"
 
 const quiz = [
   {
@@ -77,6 +78,10 @@ const quiz = [
 export default function quize() {
   return (
     <>
+      <Head>
+        <title>Quiz</title>
+        <meta name="viewport" content="initial-scale=1.0, width=device-width" />
+      </Head>
       <div className={`row header ${Quiz.stackTop}`}>
         <NavigationQuiz />
       </div>
