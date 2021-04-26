@@ -4,12 +4,12 @@ import NavigationBar from "../components/NavigationBar"
 import Head from 'next/head'
 
 const btn2 = {
-  text: "Back To Home",
+  text: "กลับหน้าหลัก",
   uri: "/",
 }
 
 const btn1 = {
-  text: "See Member",
+  text: "ดูสมาชิก",
   uri: "/member",
 }
 
@@ -27,7 +27,7 @@ export default function result() {
         <Content
           title={"About Site"}
           text={
-            "Lorem Ipsum is simply dummy text of the printing and type setting industry. Lorem"
+            "เว็บไซต์นี้เป็นส่วนหนึ่งของรายวิชา 05506212:DATA MINING TECHNIQUES สร้างขึ้นเพื่อแนะนำการเลือกใช้ Frontend Framework  ที่เหมาะสมกับผู้ใช้งาน"
           }
           imageUri={"/about.webp"}
           btn1={btn1}

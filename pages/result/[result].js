@@ -5,12 +5,12 @@ import NavigationBar from "../../components/NavigationBar"
 import styles from "../../styles/result.module.css"
 
 const btn1 = {
-  text: "Learn More",
+  text: "เรียนรู้เพิ่มเติม",
   uri: "/member",
 }
 
 const btn2 = {
-  text: "Predict Again",
+  text: "แนะนำอีกครั้ง",
   uri: "/quiz",
 }
 

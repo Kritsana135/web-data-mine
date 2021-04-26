@@ -4,7 +4,7 @@ import Footer from "../components/Footer"
 import Head from "next/head"
 
 const btn1 = {
-  text: "Click to Start",
+  text: "เริ่มการแนะนำ",
   uri: "/quiz",
 }
 
@@ -12,7 +12,7 @@ export default function Home() {
   return (
     <div className="box">
       <Head>
-        <title>Predict Framework</title>
+        <title>Framework Recomendation</title>
         <meta name="viewport" content="initial-scale=1.0, width=device-width" />
       </Head>
       <div className="row header">
@@ -20,9 +20,9 @@ export default function Home() {
       </div>
       <div className="row content">
         <Content
-          title={"Application Title"}
+          title={"Frontend FrameWork Recomendation"}
           text={
-            "Lorem Ipsum is simply dummy text of the printing and type setting industry. Lorem"
+            "แนะนำ web frontend framework ที่เหมาะสมสำหรับคุณ"
           }
           imageUri={"/main-people.webp"}
           btn1={btn1}

@@ -4,12 +4,12 @@ import NavigationBar from "../components/NavigationBar"
 import Head from "next/head"
 
 const btn2 = {
-  text: "Back To Home",
+  text: "กลับหน้าหลัก",
   uri: "/",
 }
 
 const btn1 = {
-  text: "See About",
+  text: "เกี่ยวกับไซต์",
   uri: "/about",
 }
 
