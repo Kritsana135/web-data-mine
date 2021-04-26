@@ -19,7 +19,7 @@ export default function Home() {
           text={
             "Lorem Ipsum is simply dummy text of the printing and type setting industry. Lorem"
           }
-          imageUri={"/main-people.png"}
+          imageUri={"/main-people.webp"}
           btn1={btn1}
         />
       </div>

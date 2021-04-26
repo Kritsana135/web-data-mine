@@ -31,7 +31,7 @@ export default function result() {
           title={"About Site"}
           texts={memberName}
           multipleLine={true}
-          imageUri={"/member.png"}
+          imageUri={"/member.webp"}
           btn1={btn1}
           btn2={btn2}
         />

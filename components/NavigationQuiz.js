@@ -15,7 +15,7 @@ export default function NavigationBar(props) {
     <nav className={`nav ${Quiz.nav}`}>
       <div className={`nav__logo ${Quiz.centerLogo}`} onClick={backToHome}>
         <img
-          src="/logo.png"
+          src="/logo.webp"
           alt="logo"
           className={`nav__logo ${Quiz.centerLogo}`}
         />

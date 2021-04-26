@@ -24,7 +24,7 @@ export default function result() {
           text={
             "Lorem Ipsum is simply dummy text of the printing and type setting industry. Lorem"
           }
-          imageUri={"/about.png"}
+          imageUri={"/about.webp"}
           btn1={btn1}
           btn2={btn2}
         />

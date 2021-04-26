@@ -14,7 +14,7 @@ export default function NavigationBar(props) {
   return (
     <nav className="nav">
       <div className="nav__logo" onClick={backToHome}>
-        <img src="/logo.png" alt="logo" />
+        <img src="/logo.webp" alt="logo" />
       </div>
 
       <div className="nav__item about" style={styles}>

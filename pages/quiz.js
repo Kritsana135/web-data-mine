@@ -84,7 +84,7 @@ export default function quize() {
         <div className={`row content ${Quiz.content}`}>
           <QuizContent
             title={"How long you spend time to learning ?"}
-            imageUri={"/main-people.png"}
+            imageUri={"/main-people.webp"}
             quiz={quiz}
           />
         </div>
