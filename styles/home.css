@@ -60,6 +60,17 @@ body {
   margin-top: 10px;
 }
 
+.row {
+  display: flex;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+
+}
+
+.column {
+  flex-flow: column;
+}
+
 .col {
   display: flex;
   flex-flow: column;

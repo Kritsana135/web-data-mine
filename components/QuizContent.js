@@ -47,6 +47,7 @@ export default function Content(props) {
     router.push("/")
   }
 
+
   const addAnswer = (key) => {
     console.log(key)
     let newAnswer = [...answer] // copy array
