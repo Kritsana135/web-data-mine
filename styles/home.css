@@ -64,11 +64,13 @@ body {
   display: flex;
   -ms-flex-wrap: wrap;
   flex-wrap: wrap;
-
+  flex-flow: row wrap;
 }
 
 .column {
-  flex-flow: column;
+  /* width: 100%; */
+  flex-flow: column wrap;
+  padding: 0.25em;
 }
 
 .col {

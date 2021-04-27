@@ -16,10 +16,16 @@ export default function QuizContentTemp(props) {
   if (props.imageUri) styles.backgroundImage = `url(${props.imageUri})`;
 
   const changeCurrent = async (value) => {
-
     const sum = current + value;
-    console.log(sum);
-    if (answer[current] === undefined && sum >= 0 && value != -1) {
+
+
+    if (
+      (answer[current] === undefined ||
+        (answer[current] &&
+          answer[current][props.quiz[current].key].length === 0)) &&
+      sum >= 0 &&
+      value != -1
+    ) {
       return;
     }
     if (sum >= 0 && sum < props.quiz.length) {
@@ -34,7 +40,7 @@ export default function QuizContentTemp(props) {
           ...element,
         };
       });
-      console.log(data)
+      console.log(data);
       // let data = new FormData();
       // answer.map((item, index) => {
       //   data.append(
@@ -64,7 +70,6 @@ export default function QuizContentTemp(props) {
 
   const addAnswerMulti = (quiz, item) => {
     let newAnswer = [...answer]; // copy array
-    console.log("ADD ", newAnswer[current]);
     if (!newAnswer[current]) newAnswer[current] = { [quiz.key]: [item.value] };
     else {
       if (newAnswer[current][quiz.key].includes(item.value))
@@ -116,7 +121,9 @@ export default function QuizContentTemp(props) {
           </button>
           <button
             className={`btn ${
-              answer[current] === undefined ? `${Quiz.disableBtn}` : null
+              answer[current] === undefined || !answer[current].length
+                ? `${Quiz.disableBtn}`
+                : null
             }`}
             onClick={() => changeCurrent(1)}
           >

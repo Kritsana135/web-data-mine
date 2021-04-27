@@ -5,7 +5,7 @@ export default function SelectQuiz({
   addAnswer = () => {},
 }) {
   return (
-    <div className="groupChoice p-1 ">
+    <div className="groupChoice  ">
       {quiz.answer.map((item, index) => {
         return (
           <button

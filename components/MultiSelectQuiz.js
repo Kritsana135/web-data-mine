@@ -5,7 +5,7 @@ export default function MultiSelectQuiz({
   addAnswer = () => {},
 }) {
   return (
-    <div className="groupChoice p-1 multi">
+    <div className="groupChoice  multi">
       <div className="row">
         {quiz.answer.map((item, index) => {
           return (
