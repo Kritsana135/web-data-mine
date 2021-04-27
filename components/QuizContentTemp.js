@@ -18,7 +18,6 @@ export default function QuizContentTemp(props) {
   const changeCurrent = async (value) => {
     const sum = current + value;
 
-
     if (
       (answer[current] === undefined ||
         (answer[current] &&
@@ -33,31 +32,36 @@ export default function QuizContentTemp(props) {
       return setCurrent(sum);
     }
     if (sum === props.quiz.length) {
-      let data = {};
+      let data = new FormData();
+      let temp = {};
       answer.forEach((element) => {
-        data = {
-          ...data,
+        temp = {
+          ...temp,
           ...element,
         };
       });
-      console.log(data);
-      // let data = new FormData();
-      // answer.map((item, index) => {
-      //   data.append(
-      //     props.quiz[index].key,
-      //     props.quiz[index].answer[item].value
-      //   );
-      // });
-      // const config = {
-      //   method: "post",
-      //   url: `${process.env.NEXT_PUBLIC_API_URI}/predict`,
-      //   headers: { "Content-Type": "multipart/form-data" },
-      //   data: data,
-      // };
 
-      // const response = await axios(config);
-      // const result = response.data.result;
-      // return router.push(`/result/${result}`);
+      for (let key in temp) {
+        data.append(key, temp[key]);
+      }
+
+      //   for (var value of data.values()) {
+      //     console.log(value);
+      //  }
+
+      const config = {
+        method: "post",
+        url: `${process.env.NEXT_PUBLIC_API_URI}/predict`,
+        headers: { "Content-Type": "multipart/form-data" },
+        data: data,
+      };
+      try {
+        const response = await axios(config);
+        const result = response.data.result;
+        return router.push(`/result/${result}`);
+      } catch (error) {
+        console.log(error);
+      }
     }
     router.push("/");
   };
@@ -121,7 +125,8 @@ export default function QuizContentTemp(props) {
           </button>
           <button
             className={`btn ${
-              answer[current] === undefined || !answer[current].length
+              answer[current] === undefined ||
+              !answer[current][props.quiz[current].key].length
                 ? `${Quiz.disableBtn}`
                 : null
             }`}
