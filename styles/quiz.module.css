@@ -60,7 +60,7 @@
 .groupChoice {
   width: 100%;
   text-align: center;
-  margin-top: 1.5rem;
+  /* margin-top: 1.5rem; */
 }
 
 .groupChoice button {
@@ -93,32 +93,6 @@
   .hideBg {
     display: none;
   }
-
-  /* .groupChoice {
-    width: 100%;
-    text-align: center;
-    margin-top: 1.5rem;
-  } */
-
-  /* .groupChoice button {
-    width: 90%;
-    height: 43px;
-    margin-top: 1rem;
-
-    border: 1px solid #455a64;
-    box-sizing: border-box;
-    background: transparent;
-    cursor: pointer;
-  } */
-
-  /* .groupChoice button p {
-    text-align: start;
-    font-weight: 600;
-    font-size: 24px;
-    color: #455a64;
-    margin: 0;
-    margin-left: 1rem;
-  } */
 
   .expandCol {
     min-height: 100%;

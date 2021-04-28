@@ -19,12 +19,12 @@
   margin-top: 1.5rem;
   margin-left: auto;
   margin-right: auto;
-  padding-left: 2em;
-  padding-right: 2em;
+  /* padding-left: 2em;
+  padding-right: 2em; */
 }
 
 .groupChoice button {
-  width: 90%;
+  width: 100%;
   height: 43px;
   margin-top: 1rem;
   border: 1px solid #455a64;
@@ -47,12 +47,13 @@
 }
 
 .groupChoice.multi button {
-  width: auto;
+  width: 100%;
   margin: 1rem auto;
   border: 1px solid #455a64;
   box-sizing: border-box;
   background: transparent;
   cursor: pointer;
+  margin: 0;
 }
 
 .groupChoice button p {

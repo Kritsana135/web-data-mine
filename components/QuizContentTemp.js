@@ -1,22 +1,22 @@
-import { useRouter } from "next/router";
-import { useState } from "react";
-import Quiz from "../styles/quiz.module.css";
-import MultiSelectQuiz from "./MultiSelectQuiz";
-import SelectQuiz from "./SelectQuiz";
-const axios = require("axios");
-const FormData = require("form-data");
+import { useRouter } from "next/router"
+import { useState } from "react"
+import Quiz from "../styles/quiz.module.css"
+import MultiSelectQuiz from "./MultiSelectQuiz"
+import SelectQuiz from "./SelectQuiz"
+const axios = require("axios")
+const FormData = require("form-data")
 
 export default function QuizContentTemp(props) {
-  const router = useRouter();
-  const [answer, setAnswer] = useState([]);
-  const [current, setCurrent] = useState(0);
-  const [doNo, setDoNo] = useState(0);
-  const styles = {};
+  const router = useRouter()
+  const [answer, setAnswer] = useState([])
+  const [current, setCurrent] = useState(0)
+  const [doNo, setDoNo] = useState(0)
+  const styles = {}
 
-  if (props.imageUri) styles.backgroundImage = `url(${props.imageUri})`;
+  if (props.imageUri) styles.backgroundImage = `url(${props.imageUri})`
 
   const changeCurrent = async (value) => {
-    const sum = current + value;
+    const sum = current + value
 
     if (
       (answer[current] === undefined ||
@@ -25,65 +25,61 @@ export default function QuizContentTemp(props) {
       sum >= 0 &&
       value != -1
     ) {
-      return;
+      return
     }
     if (sum >= 0 && sum < props.quiz.length) {
-      setDoNo(sum);
-      return setCurrent(sum);
+      setDoNo(sum)
+      return setCurrent(sum)
     }
     if (sum === props.quiz.length) {
-      let data = new FormData();
-      let temp = {};
+      let data = new FormData()
+      let temp = {}
       answer.forEach((element) => {
         temp = {
           ...temp,
           ...element,
-        };
-      });
+        }
+      })
 
       for (let key in temp) {
-        data.append(key, temp[key]);
+        data.append(key, temp[key])
       }
-
-      //   for (var value of data.values()) {
-      //     console.log(value);
-      //  }
 
       const config = {
         method: "post",
         url: `${process.env.NEXT_PUBLIC_API_URI}/predict`,
         headers: { "Content-Type": "multipart/form-data" },
         data: data,
-      };
+      }
       try {
-        const response = await axios(config);
-        const result = response.data.result;
-        return router.push(`/result/${result}`);
+        const response = await axios(config)
+        const result = response.data.result
+        return router.push(`/result/${result}`)
       } catch (error) {
-        console.log(error);
+        console.log(error)
       }
     }
-    router.push("/");
-  };
+    router.push("/")
+  }
 
   const addAnswer = (quiz, item) => {
-    let newAnswer = [...answer]; // copy array
-    newAnswer[current] = { [quiz.key]: item.value };
-    setAnswer(newAnswer);
-  };
+    let newAnswer = [...answer] // copy array
+    newAnswer[current] = { [quiz.key]: item.value }
+    setAnswer(newAnswer)
+  }
 
   const addAnswerMulti = (quiz, item) => {
-    let newAnswer = [...answer]; // copy array
-    if (!newAnswer[current]) newAnswer[current] = { [quiz.key]: [item.value] };
+    let newAnswer = [...answer] // copy array
+    if (!newAnswer[current]) newAnswer[current] = { [quiz.key]: [item.value] }
     else {
       if (newAnswer[current][quiz.key].includes(item.value))
         newAnswer[current][quiz.key] = newAnswer[current][quiz.key].filter(
           (ele) => ele !== item.value
-        );
-      else newAnswer[current][quiz.key].push(item.value);
+        )
+      else newAnswer[current][quiz.key].push(item.value)
     }
-    setAnswer(newAnswer);
-  };
+    setAnswer(newAnswer)
+  }
 
   const selectComponent = (quiz) => {
     switch (quiz.type) {
@@ -96,7 +92,7 @@ export default function QuizContentTemp(props) {
             current={current}
             addAnswer={addAnswer}
           />
-        );
+        )
 
       case "checkbox":
         return (
@@ -106,9 +102,9 @@ export default function QuizContentTemp(props) {
             current={current}
             addAnswer={addAnswerMulti}
           />
-        );
+        )
     }
-  };
+  }
   return (
     <>
       <div
@@ -118,7 +114,9 @@ export default function QuizContentTemp(props) {
         <p className={`app-text ${Quiz.appText}`}>
           {props.quiz[current].question}
         </p>
-        {selectComponent(props.quiz[current])}
+        <div className={`${Quiz.groupChoice}`}>
+          {selectComponent(props.quiz[current])}
+        </div>
         <div className={`group ${Quiz.content}`}>
           <button className="btn btn-2" onClick={() => changeCurrent(-1)}>
             {current === 0 ? "กลับหน้าหลัก" : "ก่อนหน้า"}
@@ -149,5 +147,5 @@ export default function QuizContentTemp(props) {
         style={styles}
       ></div>
     </>
-  );
+  )
 }

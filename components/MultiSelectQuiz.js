@@ -1,3 +1,4 @@
+import multilSelect from "../styles/multiSelectQuiz.module.css"
 export default function MultiSelectQuiz({
   quiz = {},
   answer = [],
@@ -6,7 +7,7 @@ export default function MultiSelectQuiz({
 }) {
   return (
     <div className="groupChoice  multi">
-      <div className="row">
+      <div className={multilSelect.row}>
         {quiz.answer.map((item, index) => {
           return (
             <div className="column" key={index}>
@@ -23,9 +24,9 @@ export default function MultiSelectQuiz({
                 {item.label}
               </button>
             </div>
-          );
+          )
         })}
       </div>
     </div>
-  );
+  )
 }
