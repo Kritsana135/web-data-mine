@@ -67,7 +67,7 @@ const quiz = [
     answer: [
       { value: "libal", label: "ใช้ UI Library ทั้งหมด" },
       { value: "libpt", label: "ใช้ UI Library บางส่วน" },
-      { value: "nolibrary", label: "ไม่ใช้ UI Library เลย (เขียนโค้ดเองทั้งหมด)" },
+      { value: "no library", label: "ไม่ใช้ UI Library เลย (เขียนโค้ดเองทั้งหมด)" },
     ],
     key: "UI_Libs",
     type: "dropdown",
