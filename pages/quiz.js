@@ -43,7 +43,7 @@ const quiz = [
     type: "dropdown",
   },
   {
-    question: "ท่านสามารถเขียนภาษาใดต่อไปนี้ได้บ้าง? (ตอบได้มากกว่า 1 คำตอบ)",
+    question: "ภาษาที่ท่านสะดวกสำหรับการเรียนรู้? (ตอบได้มากกว่า 1 คำตอบ)",
     answer: [
       { value: "2", label: "ภาษาไทย" },
       { value: "1", label: "ภาษาอังกฤษ" },
@@ -52,7 +52,7 @@ const quiz = [
     type: "checkbox",
   },
   {
-    question: "ภาษาที่ท่านสะดวกสำหรับการเรียนรู้? (ตอบได้มากกว่า 1 คำตอบ)",
+    question: "ท่านสามารถเขียนภาษาใดต่อไปนี้ได้บ้าง? (ตอบได้มากกว่า 1 คำตอบ)",
     answer: [
       { value: "8", label: "JavaScript" },
       { value: "4", label: "HTML" },
@@ -115,9 +115,9 @@ const quiz = [
   {
     question: "คุณให้ความสำคัญกับความต้องการของตลาดมากน้อยเพียงใด?",
     answer: [
-      { value: "1", label: "น้อย" },
-      { value: "2", label: "ปานกลาง" },
       { value: "3", label: "มาก" },
+      { value: "2", label: "ปานกลาง" },
+      { value: "1", label: "น้อย" },
     ],
     key: "factor_market_needs",
     type: "dropdown",
@@ -126,9 +126,9 @@ const quiz = [
   {
     question: "คุณให้ความสำคัญกับค่าตอบแทนมากน้อยเพียงใด?",
     answer: [
-      { value: "1", label: "น้อย" },
-      { value: "2", label: "ปานกลาง" },
       { value: "3", label: "มาก" },
+      { value: "2", label: "ปานกลาง" },
+      { value: "1", label: "น้อย" },
     ],
     key: "factor_compensation",
     type: "dropdown",
@@ -148,9 +148,9 @@ const quiz = [
   {
     question: "คุณต้องการสร้างเว็บที่มีการนำเสนอเนื้อหามากน้อยเพียงใด?",
     answer: [
-      { value: "1", label: "น้อย" },
-      { value: "2", label: "ปานกลาง" },
       { value: "3", label: "มาก" },
+      { value: "2", label: "ปานกลาง" },
+      { value: "1", label: "น้อย" },
     ],
     key: "website_content",
     type: "dropdown",
@@ -158,9 +158,9 @@ const quiz = [
   {
     question: "คุณต้องการสร้างเว็บที่มีการใช้กราฟิกมากน้อยเพียงใด?",
     answer: [
-      { value: "1", label: "น้อย" },
-      { value: "2", label: "ปานกลาง" },
       { value: "3", label: "มาก" },
+      { value: "2", label: "ปานกลาง" },
+      { value: "1", label: "น้อย" },
     ],
     key: "website_graphics",
     type: "dropdown",
@@ -168,9 +168,9 @@ const quiz = [
   {
     question: "คุณต้องการสร้างเว็บที่มี Function การทำงานมากน้อยเพียงใด?",
     answer: [
-      { value: "1", label: "น้อย" },
-      { value: "2", label: "ปานกลาง" },
       { value: "3", label: "มาก" },
+      { value: "2", label: "ปานกลาง" },
+      { value: "1", label: "น้อย" },
     ],
     key: "website_functions",
     type: "dropdown",
