@@ -41,25 +41,39 @@ export default function QuizContentTemp(props) {
         }
       })
 
+      const formdata = new FormData()
       for (let key in temp) {
         data.append(key, temp[key])
+        formdata.append(key, temp[key])
       }
 
-      const config = {
-        method: "post",
-        url: `${process.env.NEXT_PUBLIC_API_URI}/predict`,
-        headers: { "Content-Type": "multipart/form-data" },
-        data: data,
+      // const config = {
+      //   method: "post",
+      //   url: `${process.env.NEXT_PUBLIC_API_URI}/predict`,
+      //   headers: { "Content-Type": "multipart/form-data" },
+      //   data: data,
+      // }
+
+      const requestOptions = {
+        method: "POST",
+        body: formdata,
+        redirect: "follow",
       }
-      try {
-        const response = await axios(config)
-        const result = response.data.result
-        return router.push(`/result/${result}`)
-      } catch (error) {
-        console.log(error)
-      }
+
+      fetch(`${process.env.NEXT_PUBLIC_API_URI}/predict`, requestOptions)
+        .then((response) => response.text())
+        .then((result) => console.log(result))
+        .catch((error) => console.log("error", error))
+
+      // try {
+      //   const response = await axios(config)
+      //   const result = response.data.result
+      //   return router.push(`/result/${result}`)
+      // } catch (error) {
+      //   console.log(error)
+      // }
     }
-    router.push("/")
+    // router.push("/")
   }
 
   const addAnswer = (quiz, item) => {

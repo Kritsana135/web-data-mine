@@ -1,9 +1,9 @@
-import QuizContent from "../components/QuizContent";
-import QuizContentTemp from "../components/QuizContentTemp";
-import Footer from "../components/Footer";
-import NavigationQuiz from "../components/NavigationQuiz";
-import Quiz from "../styles/quiz.module.css";
-import Head from "next/head";
+import QuizContent from "../components/QuizContent"
+import QuizContentTemp from "../components/QuizContentTemp"
+import Footer from "../components/Footer"
+import NavigationQuiz from "../components/NavigationQuiz"
+import Quiz from "../styles/quiz.module.css"
+import Head from "next/head"
 
 const quiz = [
   {
@@ -84,11 +84,16 @@ const quiz = [
   },
 
   {
-    question: "คุณสะดวกที่จะเรียนรู้ Web Frontend Framework ในรูปแบบใด? (ตอบได้มากกว่า 1 คำตอบ)",
+    question:
+      "คุณสะดวกที่จะเรียนรู้ Web Frontend Framework ในรูปแบบใด? (ตอบได้มากกว่า 1 คำตอบ)",
     answer: [
       { value: "8", label: "เรียนรู้โดยมีผู้เชี่ยวชาญคอยสอนและให้คำแนะนำ" },
       { value: "4", label: "เรียนรู้จากสื่อ มีเดีย เช่น วิดีโอจาก youtube" },
-      { value: "2", label: "เรียนรู้โดยการหาข้อมูลด้วยตนเองเช่น การอ่าน document จาก อินเตอร์เน็ต" },
+      {
+        value: "2",
+        label:
+          "เรียนรู้โดยการหาข้อมูลด้วยตนเองเช่น การอ่าน document จาก อินเตอร์เน็ต",
+      },
       { value: "1", label: "เรียนรู้จาก course สอนออนไลน์ต่าง ๆ" },
     ],
     key: "learning_src",
@@ -96,7 +101,8 @@ const quiz = [
   },
 
   {
-    question: "คุณต้องการใช้เวลาสำหรับเรียนรู้ Web Frontend Framework นานเท่าไร?",
+    question:
+      "คุณต้องการใช้เวลาสำหรับเรียนรู้ Web Frontend Framework นานเท่าไร?",
     answer: [
       { value: "1000'", label: "น้อยกว่า 1 เดือน" },
       { value: "0100'", label: "1-6 เดือน" },
@@ -169,7 +175,7 @@ const quiz = [
     key: "website_functions",
     type: "dropdown",
   },
-];
+]
 
 export default function quize() {
   return (
@@ -192,5 +198,5 @@ export default function quize() {
         <Footer />
       </div>
     </>
-  );
+  )
 }
