@@ -9,10 +9,10 @@ const quiz = [
   {
     question: "คุณอายุเท่าไหร่?",
     answer: [
-      { value: "1000'", label: "น้อยกว่า 18" },
-      { value: "0100'", label: "18-23" },
-      { value: "0010'", label: "24-29" },
-      { value: "0001'", label: "มากกกว่า 29" },
+      { value: "1000", label: "น้อยกว่า 18" },
+      { value: "0100", label: "18-23" },
+      { value: "0010", label: "24-29" },
+      { value: "0001", label: "มากกกว่า 29" },
     ],
     key: "age(y)",
     type: "dropdown",
@@ -20,13 +20,13 @@ const quiz = [
   {
     question: "คุณประกอบอาชีพอะไร?",
     answer: [
-      { value: "1000000'", label: "นักเรียน" },
-      { value: "0100000'", label: "นักศึกษาสาขาที่เกี่ยวข้องกับด้าน IT" },
-      { value: "0010000'", label: "นักศึกษาสาขาที่ไม่เกี่ยวข้องกับด้าน IT" },
-      { value: "0001000'", label: "อาชีพด้าน IT ที่เกี่ยวกับเว็บไซต์" },
-      { value: "0000100'", label: "อาชีพด้าน IT ที่ไม่เกี่ยวข้องกับเว็บไซต์" },
-      { value: "0000010'", label: "อาชีพที่ไม่เกี่ยวข้องกับด้าน IT" },
-      { value: "0000001'", label: "ว่างงาน" },
+      { value: "1000000", label: "นักเรียน" },
+      { value: "0100000", label: "นักศึกษาสาขาที่เกี่ยวข้องกับด้าน IT" },
+      { value: "0010000", label: "นักศึกษาสาขาที่ไม่เกี่ยวข้องกับด้าน IT" },
+      { value: "0001000", label: "อาชีพด้าน IT ที่เกี่ยวกับเว็บไซต์" },
+      { value: "0000100", label: "อาชีพด้าน IT ที่ไม่เกี่ยวข้องกับเว็บไซต์" },
+      { value: "0000010", label: "อาชีพที่ไม่เกี่ยวข้องกับด้าน IT" },
+      { value: "0000001", label: "ว่างงาน" },
     ],
     key: "career",
     type: "dropdown",
@@ -34,10 +34,10 @@ const quiz = [
   {
     question: "คุณมีประสบการณ์ในการเขียนเว็บมานานเท่าไร?",
     answer: [
-      { value: "1000'", label: "น้อยกว่า 1 ปี" },
-      { value: "0100'", label: "1-5 ปี" },
-      { value: "0010'", label: "6-10 ปี" },
-      { value: "0001'", label: "มากกว่า 10 ปี" },
+      { value: "1000", label: "น้อยกว่า 1 ปี" },
+      { value: "0100", label: "1-5 ปี" },
+      { value: "0010", label: "6-10 ปี" },
+      { value: "0001", label: "มากกว่า 10 ปี" },
     ],
     key: "exp(y)",
     type: "dropdown",
@@ -65,9 +65,9 @@ const quiz = [
   {
     question: "คุณต้องการใช้ UI Library สำหรับการสร้างเว็บมากน้อยเพียงใด?",
     answer: [
-      { value: "100'", label: "ใช้ UI Library ทั้งหมด" },
-      { value: "010'", label: "ใช้ UI Library บางส่วน" },
-      { value: "001'", label: "ไม่ใช้ UI Library เลย (เขียนโค้ดเองทั้งหมด)" },
+      { value: "100", label: "ใช้ UI Library ทั้งหมด" },
+      { value: "010", label: "ใช้ UI Library บางส่วน" },
+      { value: "001", label: "ไม่ใช้ UI Library เลย (เขียนโค้ดเองทั้งหมด)" },
     ],
     key: "UI_Libs",
     type: "dropdown",
@@ -104,10 +104,10 @@ const quiz = [
     question:
       "คุณต้องการใช้เวลาสำหรับเรียนรู้ Web Frontend Framework นานเท่าไร?",
     answer: [
-      { value: "1000'", label: "น้อยกว่า 1 เดือน" },
-      { value: "0100'", label: "1-6 เดือน" },
-      { value: "0010'", label: "7 เดือน - 1 ปี" },
-      { value: "0001'", label: "มากกว่า 1 ปี" },
+      { value: "1000", label: "น้อยกว่า 1 เดือน" },
+      { value: "0100", label: "1-6 เดือน" },
+      { value: "0010", label: "7 เดือน - 1 ปี" },
+      { value: "0001", label: "มากกว่า 1 ปี" },
     ],
     key: "duration(m)",
     type: "dropdown",
@@ -137,9 +137,9 @@ const quiz = [
   {
     question: "คุณต้องการสร้างเว็บที่เน้นการใช้งานหรือเน้นความสวยงาม?",
     answer: [
-      { value: "100'", label: "ความสวยงาม" },
-      { value: "010'", label: "การใช้งาน" },
-      { value: "001'", label: "ทั้งคู่" },
+      { value: "100", label: "ความสวยงาม" },
+      { value: "010", label: "การใช้งาน" },
+      { value: "001", label: "ทั้งคู่" },
     ],
     key: "website_function_present",
     type: "dropdown",

@@ -32,7 +32,8 @@ export default function QuizContentTemp(props) {
       return setCurrent(sum)
     }
     if (sum === props.quiz.length) {
-      let data = new FormData()
+      console.log("answer", answer)
+      // let data = new FormData()
       let temp = {}
       answer.forEach((element) => {
         temp = {
@@ -43,16 +44,16 @@ export default function QuizContentTemp(props) {
 
       const formdata = new FormData()
       for (let key in temp) {
-        data.append(key, temp[key])
-        formdata.append(key, temp[key])
+        console.log(key, temp[key], Array.isArray(temp[key]))
+        if (Array.isArray(temp[key])) {
+          for (let checkbox in temp[key]) {
+            console.log(key, checkbox)
+            formdata.append(key, temp[key][checkbox])
+          }
+        } else {
+          formdata.append(key, temp[key])
+        }
       }
-
-      // const config = {
-      //   method: "post",
-      //   url: `${process.env.NEXT_PUBLIC_API_URI}/predict`,
-      //   headers: { "Content-Type": "multipart/form-data" },
-      //   data: data,
-      // }
 
       const requestOptions = {
         method: "POST",
@@ -62,18 +63,12 @@ export default function QuizContentTemp(props) {
 
       fetch(`${process.env.NEXT_PUBLIC_API_URI}/predict`, requestOptions)
         .then((response) => response.text())
-        .then((result) => console.log(result))
+        .then(async (result) => {
+          result = JSON.parse(result)
+          await router.push(`/result/${result.result}`)
+        })
         .catch((error) => console.log("error", error))
-
-      // try {
-      //   const response = await axios(config)
-      //   const result = response.data.result
-      //   return router.push(`/result/${result}`)
-      // } catch (error) {
-      //   console.log(error)
-      // }
     }
-    // router.push("/")
   }
 
   const addAnswer = (quiz, item) => {

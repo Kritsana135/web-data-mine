@@ -7,7 +7,11 @@ export default function Content(props) {
   if (props.imageUri) styles.backgroundImage = `url(${props.imageUri})`
 
   const changePage = (uri) => {
-    router.push(uri)
+    console.log(uri)
+    if (uri.includes("http")) {
+      return (window.location.href = uri)
+    }
+    return router.push(uri)
   }
   return (
     <>
