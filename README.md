@@ -1,6 +1,4 @@
 # Frontend Framework Recommendation WEB
-# [DEMO-WEB](https://web-data-mine.vercel.app/)
-
 ## การติดตั้ง
 
 - ต้องการ Node.js
