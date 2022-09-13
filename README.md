@@ -21,3 +21,30 @@ npm run build
 ```
 npm start
 ```
+
+
+# Screen Shots
+
+> First Page
+
+![](screenshots/1-web.png)
+
+> Question Page
+
+![](screenshots/q-web.png)
+
+> Predict Result Page
+
+![](screenshots/result-web.png)
+
+> About Page
+
+![](screenshots/about-web.png)
+
+> Member Page
+
+![](screenshots/member-web.png)
+
+### Mobile
+
+![](screenshots/mol.png)
